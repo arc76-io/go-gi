@@ -1,6 +1,6 @@
 package main
 
-import "github.com/fogleman/gg"
+import "github.com/vecno-io/go-magi"
 
 var lines = []string{
 	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
@@ -14,7 +14,7 @@ var lines = []string{
 func main() {
 	const W = 800
 	const H = 400
-	dc := gg.NewContext(W, H)
+	dc := magi.NewContext(W, H)
 	dc.SetRGB(1, 1, 1)
 	dc.Clear()
 	dc.SetRGB(0, 0, 0)

@@ -1,14 +1,14 @@
 package main
 
-import "github.com/fogleman/gg"
+import "github.com/vecno-io/go-magi"
 
 func main() {
-	im, err := gg.LoadPNG("examples/baboon.png")
+	im, err := magi.LoadPNG("examples/baboon.png")
 	if err != nil {
 		panic(err)
 	}
-	pattern := gg.NewSurfacePattern(im, gg.RepeatBoth)
-	dc := gg.NewContext(600, 600)
+	pattern := magi.NewSurfacePattern(im, magi.RepeatBoth)
+	dc := magi.NewContext(600, 600)
 	dc.MoveTo(20, 20)
 	dc.LineTo(590, 20)
 	dc.LineTo(590, 590)

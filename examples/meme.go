@@ -1,10 +1,10 @@
 package main
 
-import "github.com/fogleman/gg"
+import "github.com/vecno-io/go-magi"
 
 func main() {
 	const S = 1024
-	dc := gg.NewContext(S, S)
+	dc := magi.NewContext(S, S)
 	dc.SetRGB(1, 1, 1)
 	dc.Clear()
 	if err := dc.LoadFontFace("/Library/Fonts/Impact.ttf", 96); err != nil {

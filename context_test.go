@@ -1,4 +1,4 @@
-package gg
+package magi
 
 import (
 	"crypto/md5"

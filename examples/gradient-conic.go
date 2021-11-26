@@ -1,22 +1,20 @@
-// +build ignore
-
 package main
 
 import (
 	"image/color"
 
-	"github.com/fogleman/gg"
+	"github.com/vecno-io/go-magi"
 )
 
 func main() {
-	dc := gg.NewContext(400, 400)
+	dc := magi.NewContext(400, 400)
 
-	grad1 := gg.NewConicGradient(200, 200, 0)
+	grad1 := magi.NewConicGradient(200, 200, 0)
 	grad1.AddColorStop(0.0, color.Black)
 	grad1.AddColorStop(0.5, color.RGBA{255, 215, 0, 255})
 	grad1.AddColorStop(1.0, color.RGBA{255, 0, 0, 255})
 
-	grad2 := gg.NewConicGradient(200, 200, 90)
+	grad2 := magi.NewConicGradient(200, 200, 90)
 	grad2.AddColorStop(0.00, color.RGBA{255, 0, 0, 255})
 	grad2.AddColorStop(0.16, color.RGBA{255, 255, 0, 255})
 	grad2.AddColorStop(0.33, color.RGBA{0, 255, 0, 255})

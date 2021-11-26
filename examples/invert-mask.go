@@ -1,9 +1,9 @@
 package main
 
-import "github.com/fogleman/gg"
+import "github.com/vecno-io/go-magi"
 
 func main() {
-	dc := gg.NewContext(1024, 1024)
+	dc := magi.NewContext(1024, 1024)
 	dc.DrawCircle(512, 512, 384)
 	dc.Clip()
 	dc.InvertMask()

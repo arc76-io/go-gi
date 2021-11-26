@@ -1,9 +1,9 @@
 package main
 
-import "github.com/fogleman/gg"
+import "github.com/vecno-io/go-magi"
 
 func main() {
-	dc := gg.NewContext(1000, 1000)
+	dc := magi.NewContext(1000, 1000)
 	dc.SetRGB(1, 1, 1)
 	dc.Clear()
 	dc.SetRGB(0, 0, 0)

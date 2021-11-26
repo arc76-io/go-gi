@@ -4,7 +4,7 @@ import (
 	"math"
 	"math/rand"
 
-	"github.com/fogleman/gg"
+	"github.com/vecno-io/go-magi"
 )
 
 type Point struct {
@@ -24,7 +24,7 @@ func main() {
 	const W = 1200
 	const H = 120
 	const S = 100
-	dc := gg.NewContext(W, H)
+	dc := magi.NewContext(W, H)
 	dc.SetHexColor("#FFFFFF")
 	dc.Clear()
 	n := 5

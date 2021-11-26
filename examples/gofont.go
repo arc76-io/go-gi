@@ -3,7 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/fogleman/gg"
+	"github.com/vecno-io/go-magi"
+
 	"github.com/golang/freetype/truetype"
 	"golang.org/x/image/font/gofont/goregular"
 )
@@ -16,7 +17,7 @@ func main() {
 
 	face := truetype.NewFace(font, &truetype.Options{Size: 48})
 
-	dc := gg.NewContext(1024, 1024)
+	dc := magi.NewContext(1024, 1024)
 	dc.SetFontFace(face)
 	dc.SetRGB(1, 1, 1)
 	dc.Clear()

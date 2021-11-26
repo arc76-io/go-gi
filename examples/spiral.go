@@ -3,13 +3,13 @@ package main
 import (
 	"math"
 
-	"github.com/fogleman/gg"
+	"github.com/vecno-io/go-magi"
 )
 
 func main() {
 	const S = 1024
 	const N = 2048
-	dc := gg.NewContext(S, S)
+	dc := magi.NewContext(S, S)
 	dc.SetRGB(1, 1, 1)
 	dc.Clear()
 	dc.SetRGB(0, 0, 0)

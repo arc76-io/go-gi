@@ -1,16 +1,16 @@
 package main
 
-import "github.com/fogleman/gg"
+import "github.com/vecno-io/go-magi"
 
 func main() {
 	const W = 400
 	const H = 500
-	im, err := gg.LoadPNG("examples/gopher.png")
+	im, err := magi.LoadPNG("examples/gopher.png")
 	if err != nil {
 		panic(err)
 	}
 	iw, ih := im.Bounds().Dx(), im.Bounds().Dy()
-	dc := gg.NewContext(W, H)
+	dc := magi.NewContext(W, H)
 	// draw outline
 	dc.SetHexColor("#ff0000")
 	dc.SetLineWidth(1)
@@ -25,7 +25,7 @@ func main() {
 	// draw image with current matrix applied
 	dc.SetHexColor("#0000ff")
 	dc.SetLineWidth(2)
-	dc.Rotate(gg.Radians(10))
+	dc.Rotate(magi.Radians(10))
 	dc.DrawRectangle(100, 0, float64(iw), float64(ih)/2+20.0)
 	dc.StrokePreserve()
 	dc.Clip()

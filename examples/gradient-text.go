@@ -3,7 +3,7 @@ package main
 import (
 	"image/color"
 
-	"github.com/fogleman/gg"
+	"github.com/vecno-io/go-magi"
 )
 
 const (
@@ -12,7 +12,7 @@ const (
 )
 
 func main() {
-	dc := gg.NewContext(W, H)
+	dc := magi.NewContext(W, H)
 
 	// draw text
 	dc.SetRGB(0, 0, 0)
@@ -27,7 +27,7 @@ func main() {
 	dc.Clear()
 
 	// set a gradient
-	g := gg.NewLinearGradient(0, 0, W, H)
+	g := magi.NewLinearGradient(0, 0, W, H)
 	g.AddColorStop(0, color.RGBA{255, 0, 0, 255})
 	g.AddColorStop(1, color.RGBA{0, 0, 255, 255})
 	dc.SetFillStyle(g)

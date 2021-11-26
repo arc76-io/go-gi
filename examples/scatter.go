@@ -3,15 +3,15 @@ package main
 import (
 	"math/rand"
 
-	"github.com/fogleman/gg"
+	"github.com/vecno-io/go-magi"
 )
 
-func CreatePoints(n int) []gg.Point {
-	points := make([]gg.Point, n)
+func CreatePoints(n int) []magi.Point {
+	points := make([]magi.Point, n)
 	for i := 0; i < n; i++ {
 		x := 0.5 + rand.NormFloat64()*0.1
 		y := x + rand.NormFloat64()*0.1
-		points[i] = gg.Point{x, y}
+		points[i] = magi.Point{x, y}
 	}
 	return points
 }
@@ -19,7 +19,7 @@ func CreatePoints(n int) []gg.Point {
 func main() {
 	const S = 1024
 	const P = 64
-	dc := gg.NewContext(S, S)
+	dc := magi.NewContext(S, S)
 	dc.InvertY()
 	dc.SetRGB(1, 1, 1)
 	dc.Clear()

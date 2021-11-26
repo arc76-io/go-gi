@@ -3,7 +3,7 @@ package main
 import (
 	"math"
 
-	"github.com/fogleman/gg"
+	"github.com/vecno-io/go-magi"
 )
 
 type Point struct {
@@ -22,7 +22,7 @@ func Polygon(n int, x, y, r float64) []Point {
 func main() {
 	n := 5
 	points := Polygon(n, 512, 512, 400)
-	dc := gg.NewContext(1024, 1024)
+	dc := magi.NewContext(1024, 1024)
 	dc.SetHexColor("fff")
 	dc.Clear()
 	for i := 0; i < n+1; i++ {
@@ -31,7 +31,7 @@ func main() {
 		dc.LineTo(p.X, p.Y)
 	}
 	dc.SetRGBA(0, 0.5, 0, 1)
-	dc.SetFillRule(gg.FillRuleEvenOdd)
+	dc.SetFillRule(magi.FillRuleEvenOdd)
 	dc.FillPreserve()
 	dc.SetRGBA(0, 1, 0, 0.5)
 	dc.SetLineWidth(16)

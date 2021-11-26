@@ -4,11 +4,11 @@ import (
 	"math"
 	"math/rand"
 
-	"github.com/fogleman/gg"
+	"github.com/vecno-io/go-magi"
 )
 
 func main() {
-	dc := gg.NewContext(1000, 1000)
+	dc := magi.NewContext(1000, 1000)
 	for j := 0; j < 10; j++ {
 		for i := 0; i < 10; i++ {
 			x := float64(i)*100 + 50

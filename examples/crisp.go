@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/fogleman/gg"
-)
+import "github.com/vecno-io/go-magi"
 
 func main() {
 	const W = 1000
@@ -10,7 +8,7 @@ func main() {
 	const Minor = 10
 	const Major = 100
 
-	dc := gg.NewContext(W, H)
+	dc := magi.NewContext(W, H)
 	dc.SetRGB(1, 1, 1)
 	dc.Clear()
 

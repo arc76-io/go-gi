@@ -3,13 +3,13 @@ package main
 import (
 	"image/color"
 
-	"github.com/fogleman/gg"
+	"github.com/vecno-io/go-magi"
 )
 
 func main() {
-	dc := gg.NewContext(500, 400)
+	dc := magi.NewContext(500, 400)
 
-	grad := gg.NewLinearGradient(20, 320, 400, 20)
+	grad := magi.NewLinearGradient(20, 320, 400, 20)
 	grad.AddColorStop(0, color.RGBA{0, 255, 0, 255})
 	grad.AddColorStop(1, color.RGBA{0, 0, 255, 255})
 	grad.AddColorStop(0.5, color.RGBA{255, 0, 0, 255})
